@@ -1,19 +1,19 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
+import {useEffect, useState, useTransition} from "react";
+import {useRouter} from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/src/components/ui/dropdown-menu";
-import { Button } from "@/src/components/ui/button";
-import { setLocale } from "@/src/_lib/actions";
+import {Button} from "@/src/components/ui/button";
+import {setLocale} from "@/src/_lib/actions/locale";
 
 const LANGUAGES = [
-  { code: "en", label: "English" },
-  { code: "ru", label: "Русский" }
+  {code: "en", label: "English"},
+  {code: "ru", label: "Русский"}
 ];
 
 export default function LanguageSwitcher() {
@@ -32,26 +32,22 @@ export default function LanguageSwitcher() {
       }
       const cookieValue = typeof document !== "undefined"
         ? document.cookie
-            .split(";")
-            .map((c) => c.trim())
-            .find((c) => c.startsWith("locale="))
+          .split(";")
+          .map((c) => c.trim())
+          .find((c) => c.startsWith("locale="))
         : undefined;
       const value = cookieValue ? decodeURIComponent(cookieValue.split("=")[1] || "") : "";
       if (value) setCurrentLocale(value);
     } catch {
-      // noop
     }
   }, []);
 
   const handleChange = (locale: string) => {
     setCurrentLocale(locale);
-    try {
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem("locale", locale);
-      }
-    } catch {
-      // noop
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("locale", locale);
     }
+
     startTransition(async () => {
       await setLocale(locale);
       router.refresh();

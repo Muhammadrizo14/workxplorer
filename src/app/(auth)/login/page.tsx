@@ -8,7 +8,7 @@ import {yupResolver} from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import {Suspense} from "react";
 import {useActionState} from 'react';
-import {authenticate} from '@/src/_lib/actions';
+import {authenticate} from '@/src/_lib/actions/auth';
 import {useSearchParams} from 'next/navigation';
 import {useTranslations} from 'use-intl';
 

@@ -1,10 +1,12 @@
-'use server';
+'use server'
 
-import {cookies} from "next/headers";
-
+import { signOut } from "@/src/auth";
 import {signIn} from '@/src/auth';
 import {AuthError} from 'next-auth';
 
+export async function logoutAction() {
+  await signOut({ redirectTo: '/login' });
+}
 
 export async function authenticate(
   prevState: string | undefined,
@@ -29,14 +31,3 @@ export async function authenticate(
 
 
 
-export async function setLocale(locale: string) {
-  const store = await cookies();
-
-  // Set cookie with appropriate options
-  store.set('locale', locale, {
-    httpOnly: false, // Allow client-side access if needed
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-  });
-}

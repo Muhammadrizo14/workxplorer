@@ -3,7 +3,7 @@
 import {useParams} from "next/navigation"
 import {useEffect, useState} from "react"
 import {Avatar, AvatarFallback, AvatarImage} from "@/src/components/ui/avatar"
-import api from "@/src/_lib/serverApiClient"
+import api from "@/src/_lib/api/client"
 import {UserType} from "@/src/types/user.types"
 import {Skeleton} from "@/src/components/ui/skeleton"
 import {Button} from "@/src/components/ui/button";

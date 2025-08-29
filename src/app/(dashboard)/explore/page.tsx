@@ -1,4 +1,4 @@
-import api from "@/src/_lib/serverApiClient";
+import api from "@/src/_lib/api/client";
 import Link from "next/link";
 import {UserType} from "@/src/types/user.types";
 import {getTranslations} from 'next-intl/server';

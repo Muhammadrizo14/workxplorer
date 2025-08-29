@@ -33,7 +33,7 @@ import LanguageSwitcher from "@/src/components/lang-switcher";
 import {ThemeToggle} from "@/src/components/theme-toggle";
 import {UserType} from "@/src/types/user.types";
 import { getTranslations } from "next-intl/server";
-import { logoutAction } from "@/src/actions/auth";
+import { logoutAction } from "@/src/_lib/actions/auth";
 
 interface IProps {
   user: UserType

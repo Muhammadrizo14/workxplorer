@@ -9,7 +9,7 @@ import { InferType } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import api from "@/src/_lib/serverApiClient";
+import api from "@/src/_lib/api/client";
 import { useTranslations } from "use-intl";
 import { toast } from "sonner"
 

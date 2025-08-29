@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import { authConfig } from './auth.config';
 import Credentials from 'next-auth/providers/credentials';
-import api from "@/src/_lib/serverApiClient";
+import api from "@/src/_lib/api/client";
 import {UserType} from "@/src/types/user.types";
 
 export async function getUser(): Promise<UserType | null> {
