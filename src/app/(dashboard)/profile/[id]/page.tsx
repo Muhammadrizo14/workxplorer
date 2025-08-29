@@ -34,33 +34,33 @@ export default function ProfilePage() {
   return (
     <div>
       {loading ? (
-        <div className="p-16">
-          <div className="flex items-end gap-5">
-            <Skeleton className="w-80 h-80 rounded-full mb-6" />
-            <div>
-              <Skeleton className="h-10 w-40 mb-4" />
-              <Skeleton className="h-6 w-60" />
+        <div className="px-4 sm:px-8 md:px-16 py-10">
+          <div className="flex flex-col md:flex-row items-center md:items-end gap-6">
+            <Skeleton className="w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full mb-4 md:mb-6" />
+            <div className="w-full md:w-auto text-center md:text-left">
+              <Skeleton className="h-8 sm:h-10 w-40 sm:w-56 mb-3 sm:mb-4" />
+              <Skeleton className="h-5 sm:h-6 w-60 sm:w-80" />
             </div>
           </div>
         </div>
       ) : user ? (
-        <div className="p-16">
-          <div className="flex items-end gap-5">
-            <Avatar className="w-80 h-80 mb-6">
+        <div className="px-4 sm:px-8 md:px-16 py-10">
+          <div className="flex flex-col md:flex-row items-center md:items-end gap-6">
+            <Avatar className="w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 mb-4 md:mb-6">
               <AvatarImage src={user?.avatar} alt="User Avatar" />
-              <AvatarFallback className="text-4xl">
+              <AvatarFallback className="text-2xl sm:text-3xl md:text-4xl">
                 {user?.first_name?.[0]}
               </AvatarFallback>
             </Avatar>
 
-            <div>
-              <p>{t('label.profile')}</p>
-              <h1 className="text-8xl py-6 font-bold tracking-tight">
+            <div className="text-center md:text-left">
+              <p className="text-sm sm:text-base text-muted-foreground">{t('label.profile')}</p>
+              <h1 className="text-4xl sm:text-6xl md:text-8xl py-3 sm:py-4 md:py-6 font-bold tracking-tight">
                 {user?.first_name} {user?.last_name}
               </h1>
-              <p className="text-2lg text-muted-foreground mb-6">
-                {t('email')}:{" "}
-                <a className="underline" href={`mailto:${user?.email}`}>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6">
+                {t('email')}: {""}
+                <a className="underline break-all" href={`mailto:${user?.email}`}>
                   {user?.email}
                 </a>
               </p>
@@ -68,7 +68,7 @@ export default function ProfilePage() {
           </div>
         </div>
       ) : (
-        <div className="p-16 w-full flex flex-col items-center h-screen justify-center">
+        <div className="px-4 sm:px-8 md:px-16 py-10 w-full flex flex-col items-center h-screen justify-center">
           <h1 className="text-4xl font-bold">{t('notFound.title')}</h1>
           <Button className="mt-6" asChild>
             <Link href="/explore">{t('notFound.backToExplore')}</Link>

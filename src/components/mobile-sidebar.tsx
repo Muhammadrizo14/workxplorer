@@ -1,6 +1,6 @@
 import {Menu, BadgeCheck, Bell, ChevronsUpDown, Home, Sparkles, User2, Telescope, LogOut} from "lucide-react";
 import {Button} from "@/src/components/ui/button";
-import {Sheet, SheetContent, SheetTrigger} from "@/src/components/ui/sheet";
+import {Sheet, SheetContent, SheetTrigger, SheetClose} from "@/src/components/ui/sheet";
 import {UserType} from "@/src/types/user.types";
 import {
   DropdownMenu,
@@ -56,13 +56,15 @@ export async function MobileSidebar({user}: IProps) {
                   <ul className="flex w-full min-w-0 flex-col gap-1">
                     {items.map((item) => (
                       <li key={item.title} className="group/menu-item relative">
-                        <Link 
-                          href={item.url}
-                          className="flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground"
-                        >
-                          <item.icon className="size-4 shrink-0" />
-                          <span className="truncate">{item.title}</span>
-                        </Link>
+                        <SheetClose asChild>
+                          <Link 
+                            href={item.url}
+                            className="flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground"
+                          >
+                            <item.icon className="size-4 shrink-0" />
+                            <span className="truncate">{item.title}</span>
+                          </Link>
+                        </SheetClose>
                       </li>
                     ))}
                   </ul>
@@ -121,10 +123,12 @@ export async function MobileSidebar({user}: IProps) {
                       <DropdownMenuSeparator />
                       <DropdownMenuGroup>
                         <DropdownMenuItem asChild>
-                          <Link href={"/profile"}>
-                            <BadgeCheck />
-                            {t("account")}
-                          </Link>
+                          <SheetClose asChild>
+                            <Link href={"/profile"}>
+                              <BadgeCheck />
+                              {t("account")}
+                            </Link>
+                          </SheetClose>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                           <Bell />
