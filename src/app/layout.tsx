@@ -1,28 +1,38 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import "./globals.css";
-import { Poppins } from 'next/font/google';
+import {Roboto} from 'next/font/google';
+import {NextIntlClientProvider} from 'next-intl';
+import {ThemeProvider} from "next-themes";
+import {Toaster} from "sonner";
 
-const poppins = Poppins({
+const roboto = Roboto({
   weight: ['300', '400', '500', '600'],
-  subsets: ['latin'],
-  display: 'swap',
 });
-
 
 export const metadata: Metadata = {
   title: "Тестовое задания на компанию WORKXPLORER",
   description: "Комплексная платформа профориентации, которая помогает студентам и профессионалам принимать обоснованные решения о своей будущей карьере с помощью продвинутой оценки и персонализированных рекомендаций.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default async function RootLayout({
+                                           children,
+                                         }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={poppins.className}>
-      <body className="antialiased bg-gray-100">
-        {children}
+    <html className={roboto.className} suppressHydrationWarning>
+      <body className="antialiased bg-gray-100 dark:bg-[#1c1c1c]" suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider>
+            <Toaster richColors position="top-right" />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

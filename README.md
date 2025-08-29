@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WorkXloperUz — Next.js App
 
-## Getting Started
+## Setup Instructions
 
-First, run the development server:
+Prerequisites:
+- Node.js 18+ and npm (or yarn/pnpm/bun)
+- Create a `.env.local` file in the project root with your environment variables as needed (e.g., NextAuth, API endpoints). Examples:
+  - NEXTAUTH_URL=http://localhost:3000
+  - NEXTAUTH_SECRET=your_generated_secret
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Install dependencies:
+- ```bash npm install ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
+- ```bash npm run dev ```
+- Open http://localhost:3000 in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build for production:
+- ```bash npm run build ```
+- ```bash npm start ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lint:
+- ```bash npm run lint ```
 
-## Learn More
+## Implemented Functionality
 
-To learn more about Next.js, take a look at the following resources:
+- Authentication pages:
+  - /login and /register under src/app/(auth)/ with shared layout.
+- Dashboard area:
+  - /explore with loading state.
+  - /profile and /profile/[id] pages.
+- Global layout and styles using TailwindCSS (see src/app/globals.css), plus theme toggling.
+- Middleware & auth configuration (see src/middleware.ts and src/auth.config.ts).
+- User context provider (src/components/user-context.tsx).
+- Internationalization groundwork (src/locales/en/common.json).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Interface Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
+### Login
+<img src="public/screenshots/login.png" alt="Login" width="600"/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Register
+<img src="public/screenshots/register.png" alt="Register" width="600"/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Explore
+<img src="public/screenshots/dashboard-explore.png" alt="Explore" width="600"/>
+
+### Profile
+<img src="public/screenshots/profile.png" alt="Profile" width="600"/>
+
+### Home
+<img src="public/screenshots/home.png" alt="Home" width="600"/>
+
+### Not Found
+<img src="public/screenshots/not-found.png" alt="Not Found" width="600"/>
+
+
+You can view them directly at:
+- http://localhost:3000/screenshots/login.png
+- http://localhost:3000/screenshots/register.png
+- http://localhost:3000/screenshots/dashboard-explore.png
+- http://localhost:3000/screenshots/profile.png
+
+## AI Usage
+
+See AI_USAGE.MD for details on where AI assisted during development. Summary:
+- Used ChatGPT to help convert design references into initial login/register layouts using TailwindCSS.
+- Assisted in resolving ESLint/TypeScript issues by explaining and iterating on errors.
+

@@ -1,0 +1,83 @@
+{
+  "common": {
+    "welcome": "Добро пожаловать",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "email": "Email",
+    "password": "Пароль",
+    "logout": "Выйти",
+    "profile": "Профиль",
+    "application": "Приложение"
+  },
+  "register": {
+    "title": "Регистрация",
+    "confirmPassword": "Подтвердите пароль",
+    "submitButton": "Зарегистрироваться",
+    "loginLink": "Уже есть аккаунт? Войти",
+    "side": {
+      "title": "С возвращением!",
+      "description": "Введите личные данные, чтобы использовать все возможности сайта",
+      "cta": "Уже есть аккаунт? Войти."
+    },
+    "validation": {
+      "emailRequired": "Email обязателен",
+      "passwordMinLength": "Минимум 6 символов",
+      "passwordsNotMatch": "Пароли не совпадают"
+    }
+  },
+  "login": {
+    "title": "Вход",
+    "submitButton": "Войти",
+    "registerLink": "Нет аккаунта? Зарегистрироваться",
+    "testCredentials": "Тестовые данные: eve.holt@reqres.in / pistol",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Пароль",
+    "side": {
+      "title": "Присоединяйтесь к нам!",
+      "description": "Зарегистрируйтесь, чтобы использовать все возможности сайта",
+      "cta": "Создать аккаунт"
+    },
+    "validation": {
+      "emailRequired": "Email обязателен",
+      "passwordRequired": "Пароль обязателен"
+    }
+  },
+  "profile": {
+    "title": "Мой профиль",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Электронная почта",
+    "label": {
+      "profile": "Профиль"
+    },
+    "additional": {
+      "title": "Дополнительная информация",
+      "subtitle": "Видно только вам",
+      "empty": "Информация не сохранена"
+    },
+    "notFound": {
+      "title": "Пользователь не найден",
+      "backToExplore": "Вернуться к поиску"
+    }
+  },
+  "explore": {
+    "title": "Откройте больше профилей",
+    "empty": "Профили не найдены."
+  },
+  "sidebar": {
+    "application": "Приложение",
+    "home": "Главная",
+    "profile": "Профиль",
+    "explore": "Обзор",
+    "upgrade": "Обновить до Pro",
+    "account": "Аккаунт",
+    "notifications": "Уведомления",
+    "logout": "Выйти"
+  },
+  "notFound": {
+    "title": "404 - Страница не найдена",
+    "description": "Не удалось найти запрошенный ресурс.",
+    "cta": "Вернуться на главную"
+  }
+}

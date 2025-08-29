@@ -1,0 +1,83 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "email": "Email",
+    "password": "Password",
+    "logout": "Logout",
+    "profile": "Profile",
+    "application": "Application"
+  },
+  "register": {
+    "title": "Sign Up",
+    "confirmPassword": "Confirm Password",
+    "submitButton": "Register",
+    "loginLink": "Already have an account? Sign In",
+    "side": {
+      "title": "Welcome back!",
+      "description": "Enter your personal details to use all of site features",
+      "cta": "Already have an account? Sign in."
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "passwordMinLength": "Minimum 6 characters",
+      "passwordsNotMatch": "Passwords don't match"
+    }
+  },
+  "login": {
+    "title": "Sign In",
+    "submitButton": "Login",
+    "registerLink": "Don't have an account? Sign Up",
+    "testCredentials": "Test credentials: eve.holt@reqres.in / pistol",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "side": {
+      "title": "Come join us!",
+      "description": "Register with your personal details to use all of site features",
+      "cta": "Create Account"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "label": {
+      "profile": "Profile"
+    },
+    "additional": {
+      "title": "Additional Information",
+      "subtitle": "Only visible to you",
+      "empty": "No information was stored"
+    },
+    "notFound": {
+      "title": "User not found",
+      "backToExplore": "Go Back to exploring"
+    }
+  },
+  "explore": {
+    "title": "Explore more profiles",
+    "empty": "No profiles found."
+  },
+  "sidebar": {
+    "application": "Application",
+    "home": "Home",
+    "profile": "Profile",
+    "explore": "Explore",
+    "upgrade": "Upgrade to Pro",
+    "account": "Account",
+    "notifications": "Notifications",
+    "logout": "Log out"
+  },
+  "notFound": {
+    "title": "404 - Not Found",
+    "description": "Could not find the requested resource.",
+    "cta": "Return Home"
+  }
+}
