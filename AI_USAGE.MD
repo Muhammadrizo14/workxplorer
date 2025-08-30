@@ -25,6 +25,7 @@ Below is a transparent breakdown of how AI was used.
 2. **ESLint & TypeScript Fixes**
     - Pasted error logs into ChatGPT.
     - Got corrected versions of the code that resolved the problems.
+    - Middleware clarify, helping with redirects
 
 3. **Project Translations**
     - The task PDF provided base translations like:
